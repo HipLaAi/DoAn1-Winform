@@ -1,0 +1,60 @@
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\bin\Debug\QLCT.exe.config
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\bin\Debug\QLCT.exe
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\bin\Debug\QLCT.pdb
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.csproj.AssemblyReference.cache
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmDangNhap.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.Properties.Resources.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.csproj.GenerateResource.cache
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.csproj.CoreCompileInputs.cache
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.exe
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.pdb
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmQuenMatKhau.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmThayMatKhau.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmChinh.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmCTGiaoDichChi.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTrangChu.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmCTGiaoDichThu.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTimKiem.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTimKiemGiaoDichChi.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTimKiemGiaoDichThu.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmThongKe.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTaiKhoan.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\bin\Debug\EPPlus.dll
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\bin\Debug\EPPlus.Interfaces.dll
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\bin\Debug\EPPlus.System.Drawing.dll
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\bin\Debug\EPPlus.xml
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.csproj.CopyComplete
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmDangKy.resources
+D:\Đồ Án 1\ĐỒ ÁN 1\DA1\QLCT\obj\Debug\QLCT.GUI.frmKiemTraSDT.resources
+D:\DA1\DA1\DA1\QLCT\bin\Debug\QLCT.exe.config
+D:\DA1\DA1\DA1\QLCT\bin\Debug\QLCT.exe
+D:\DA1\DA1\DA1\QLCT\bin\Debug\QLCT.pdb
+D:\DA1\DA1\DA1\QLCT\bin\Debug\EPPlus.dll
+D:\DA1\DA1\DA1\QLCT\bin\Debug\EPPlus.Interfaces.dll
+D:\DA1\DA1\DA1\QLCT\bin\Debug\EPPlus.System.Drawing.dll
+D:\DA1\DA1\DA1\QLCT\bin\Debug\EPPlus.xml
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.csproj.AssemblyReference.cache
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmCTGiaoDichThu.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmDangKy.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmDangNhap.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmKiemTraSDT.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmQuenMatKhau.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTaiKhoan.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmThayMatKhau.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.FRMChinh.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmCTGiaoDichChi.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmThongKe.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTimKiem.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTimKiemGiaoDichChi.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTimKiemGiaoDichThu.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmTrangChu.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.Properties.Resources.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.csproj.GenerateResource.cache
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.csproj.CoreCompileInputs.cache
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.csproj.CopyComplete
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.exe
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.pdb
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.FRMChinhADMIN.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmQuanLyTaiKhoan.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmThongKeTaiKhoan.resources
+D:\DA1\DA1\DA1\QLCT\obj\Debug\QLCT.GUI.frmCapNhatMatKhau.resources

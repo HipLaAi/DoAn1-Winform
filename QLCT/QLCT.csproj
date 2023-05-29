@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFE67863-ED4F-4D40-A261-B931C5F1A99E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLCT</RootNamespace>
+    <AssemblyName>QLCT</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=6.2.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.2.4\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net35\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net35\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\GiaoDichChiBUS.cs" />
+    <Compile Include="BUS\GiaoDichThuBUS.cs" />
+    <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="DAO\Connect.cs" />
+    <Compile Include="DAO\GiaoDichChiDAO.cs" />
+    <Compile Include="DAO\GiaoDichThuDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DTO\DanhMucDTO.cs" />
+    <Compile Include="DTO\GiaoDichDTO.cs" />
+    <Compile Include="DTO\TaiKhoanDTO.cs" />
+    <Compile Include="GUI\frmCapNhatMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCapNhatMatKhau.Designer.cs">
+      <DependentUpon>frmCapNhatMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRMChinhADMIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRMChinhADMIN.Designer.cs">
+      <DependentUpon>FRMChinhADMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCTGiaoDichThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCTGiaoDichThu.Designer.cs">
+      <DependentUpon>frmCTGiaoDichThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmKiemTraSDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmKiemTraSDT.Designer.cs">
+      <DependentUpon>frmKiemTraSDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>frmQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQuenMatKhau.Designer.cs">
+      <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThayMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThayMatKhau.Designer.cs">
+      <DependentUpon>frmThayMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRMChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRMChinh.Designer.cs">
+      <DependentUpon>FRMChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCTGiaoDichChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCTGiaoDichChi.Designer.cs">
+      <DependentUpon>frmCTGiaoDichChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThongKeTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThongKeTaiKhoan.Designer.cs">
+      <DependentUpon>frmThongKeTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTimKiem.Designer.cs">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTimKiemGiaoDichChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTimKiemGiaoDichChi.Designer.cs">
+      <DependentUpon>frmTimKiemGiaoDichChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTimKiemGiaoDichThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTimKiemGiaoDichThu.Designer.cs">
+      <DependentUpon>frmTimKiemGiaoDichThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTrangChu.Designer.cs">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmCapNhatMatKhau.resx">
+      <DependentUpon>frmCapNhatMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FRMChinhADMIN.resx">
+      <DependentUpon>FRMChinhADMIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCTGiaoDichThu.resx">
+      <DependentUpon>frmCTGiaoDichThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmKiemTraSDT.resx">
+      <DependentUpon>frmKiemTraSDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuanLyTaiKhoan.resx">
+      <DependentUpon>frmQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQuenMatKhau.resx">
+      <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThayMatKhau.resx">
+      <DependentUpon>frmThayMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FRMChinh.resx">
+      <DependentUpon>FRMChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCTGiaoDichChi.resx">
+      <DependentUpon>frmCTGiaoDichChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThongKeTaiKhoan.resx">
+      <DependentUpon>frmThongKeTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTimKiem.resx">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTimKiemGiaoDichChi.resx">
+      <DependentUpon>frmTimKiemGiaoDichChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTimKiemGiaoDichThu.resx">
+      <DependentUpon>frmTimKiemGiaoDichThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTrangChu.resx">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo góc màu xanh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif dang nhap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif dang nhap vui nhon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo góc màu hồng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat happy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif load.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif cat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo góc màu đỏ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roll Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add List_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Align Justify_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thống kê.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xlsx-file-format.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4611434_1bm8dFO.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teamwork %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\genders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
