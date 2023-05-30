@@ -69,29 +69,35 @@ namespace QLCT.GUI
 
             string diaChi = cboHuyen.Text + "-" + cboTinh.Text;
 
-            if((Regex.IsMatch(SDT, @"[XXX]")))
+            if(txtHoTen.Text != "" && SDT != "")
             {
-                if (taiKhoanBUS.CapNhatTaiKhoan(frmDangNhap.TaiKhoan, txtHoTen.Text, gioiTinh, sdt, diaChi, dtpNgaySinh.Value))
+                if ((Regex.IsMatch(SDT, @"[XXX]")))
                 {
-                    MessageBox.Show("Cập nhật thông tin tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (taiKhoanBUS.CapNhatTaiKhoan(frmDangNhap.TaiKhoan, txtHoTen.Text, gioiTinh, sdt, diaChi, dtpNgaySinh.Value))
+                    {
+                        MessageBox.Show("Cập nhật thông tin tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thông tin tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật thông tin tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (taiKhoanBUS.CapNhatTaiKhoan(frmDangNhap.TaiKhoan, txtHoTen.Text, gioiTinh, SDT, diaChi, dtpNgaySinh.Value))
+                    {
+                        MessageBox.Show("Cập nhật thông tin tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thông tin tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-            }
+            }    
             else
             {
-                if (taiKhoanBUS.CapNhatTaiKhoan(frmDangNhap.TaiKhoan, txtHoTen.Text, gioiTinh, SDT, diaChi, dtpNgaySinh.Value))
-                {
-                    MessageBox.Show("Cập nhật thông tin tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    MessageBox.Show("Cập nhật thông tin tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Cập nhật thông tin tài khoản không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         // Khoa chuc nang

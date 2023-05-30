@@ -26,8 +26,8 @@ namespace TestDA
         {
             TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
 
-            string taiKhoan = "Hiep";
-            string matKhau = "khongbiet";
+            string taiKhoan = "";
+            string matKhau = "";
             string loaiTaiKhoan = "USER";
 
             bool result = taiKhoanDAO.DangNhap(taiKhoan, matKhau, loaiTaiKhoan);
