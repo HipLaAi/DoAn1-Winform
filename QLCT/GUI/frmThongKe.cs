@@ -24,9 +24,9 @@ namespace QLCT.GUI
         //Load data
         private void Data_Load()
         {
-            chartDoThiTongTien.Series["Tổng tiền"].Points.Clear();
+            chartDoThiTongTien.Series["Tổng tiền"].Points.Clear(); //Làm mới biểu đồ
 
-            foreach (DataRow row in giaoDichChiBUS.DoThiTongTien(frmDangNhap.TaiKhoan, int.Parse(cboThang.Text)).Rows)
+            foreach (DataRow row in giaoDichChiBUS.DoThiTongTien(frmDangNhap.TaiKhoan, int.Parse(cboThang.Text)).Rows) //Biểu đồ cột thống kê theo tháng
             {
                 DateTime xValue = Convert.ToDateTime(row[0]);
                 chartDoThiTongTien.Series["Tổng tiền"].IsValueShownAsLabel = true;
@@ -39,9 +39,9 @@ namespace QLCT.GUI
                 chartDoThiTongTien.Series["Tổng tiền"].Points.AddXY("Ngày giao dịch", 0);
             }
 
-            chartDoThiDanhMucTheoThang.Series["DanhMuc"].Points.Clear();
+            chartDoThiDanhMucTheoThang.Series["DanhMuc"].Points.Clear(); //Làm mới biểu đồ
 
-            foreach (DataRow row in giaoDichChiBUS.DoThiTongDanhMucTheoThang(frmDangNhap.TaiKhoan, int.Parse(cboThang.Text)).Rows)
+            foreach (DataRow row in giaoDichChiBUS.DoThiTongDanhMucTheoThang(frmDangNhap.TaiKhoan, int.Parse(cboThang.Text)).Rows) //Biểu đồ tròn thống kê theo danh mục
             {
                 chartDoThiDanhMucTheoThang.Series["DanhMuc"].IsValueShownAsLabel = true;
                 chartDoThiDanhMucTheoThang.Series["DanhMuc"].Points.AddXY(row[0], row[1]);
@@ -58,9 +58,9 @@ namespace QLCT.GUI
         //Load DateTimePicker
         private void DatetimePicker_Load()
         {
-            chartDoThiDanhMucTheoNgay.Series["DanhMuc"].Points.Clear();
+            chartDoThiDanhMucTheoNgay.Series["DanhMuc"].Points.Clear(); //Làm mới biểu đồ
 
-            foreach (DataRow row in giaoDichChiBUS.DoThiTongDanhMucTheoNgay(frmDangNhap.TaiKhoan, dateTimePicker.Value.Day).Rows)
+            foreach (DataRow row in giaoDichChiBUS.DoThiTongDanhMucTheoNgay(frmDangNhap.TaiKhoan, dateTimePicker.Value.Day).Rows) //Biểu đồ trong thống kê theo ngày
             {
                 chartDoThiDanhMucTheoNgay.Series["DanhMuc"].IsValueShownAsLabel = true;
                 chartDoThiDanhMucTheoNgay.Series["DanhMuc"].Points.AddXY(row[0], row[1]);

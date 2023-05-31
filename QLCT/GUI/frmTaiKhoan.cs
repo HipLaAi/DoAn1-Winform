@@ -26,11 +26,13 @@ namespace QLCT.GUI
         private void Data_Load(object sender, EventArgs e)
         {
             check = false;
-            txtHoTen.Text = taiKhoanBUS.ThongTinTaiKhoan(frmDangNhap.TaiKhoan).Rows[0][2].ToString();
+
+            //Load dữ liệu vào các textbox, datetimepicker, marktextbox
+            txtHoTen.Text = taiKhoanBUS.ThongTinTaiKhoan(frmDangNhap.TaiKhoan).Rows[0][2].ToString(); 
             dtpNgaySinh.Value = Convert.ToDateTime(taiKhoanBUS.ThongTinTaiKhoan(frmDangNhap.TaiKhoan).Rows[0][4]);
             mtxtSDT.Text = sdt = taiKhoanBUS.ThongTinTaiKhoan(frmDangNhap.TaiKhoan).Rows[0][5].ToString();
 
-            cboTinh.DataSource = DanhSachTinhThanh;
+            cboTinh.DataSource = DanhSachTinhThanh; //Truyền danh sách tỉnh thành vào combobox
             InitializeDanhSachHuyen();
             string diachi = taiKhoanBUS.ThongTinTaiKhoan(frmDangNhap.TaiKhoan).Rows[0][6].ToString();
             char separator = '-';
@@ -55,7 +57,7 @@ namespace QLCT.GUI
         // Load cap nhat tai khoan
         private void CapNhatTaiKhoan()
         {
-            string gioiTinh = String.Empty;
+            string gioiTinh = String.Empty; //kiểm tra giới tính
             if (rdbNam.Checked)
             {
                 gioiTinh = "Nam";
@@ -65,13 +67,13 @@ namespace QLCT.GUI
                 gioiTinh = "Nữ";
             }
 
-            string SDT = mtxtSDT.Text.Replace("-", "").Replace(" ", "");
+            string SDT = mtxtSDT.Text.Replace("-", "").Replace(" ", ""); //Chuyển xâu ký tự điện thoại từ "-" thành ""
 
-            string diaChi = cboHuyen.Text + "-" + cboTinh.Text;
+            string diaChi = cboHuyen.Text + "-" + cboTinh.Text; //Nối xâu địa chỉ
 
-            if(txtHoTen.Text != "" && SDT != "")
+            if(txtHoTen.Text != "" && SDT != "") //Kiểm tra hoten rỗng
             {
-                if ((Regex.IsMatch(SDT, @"[XXX]")))
+                if ((Regex.IsMatch(SDT, @"[XXX]"))) //Kiểm tra SDT nếu có chữa ký tự X
                 {
                     if (taiKhoanBUS.CapNhatTaiKhoan(frmDangNhap.TaiKhoan, txtHoTen.Text, gioiTinh, sdt, diaChi, dtpNgaySinh.Value))
                     {
@@ -131,8 +133,8 @@ namespace QLCT.GUI
                 ResetTextBox();
                 mtxtSDT.Mask = "0000-000-XXX";
                 mtxtSDT.Text = taiKhoanBUS.ThongTinTaiKhoan(frmDangNhap.TaiKhoan).Rows[0][5].ToString().Substring(0, 7);
-            }    
-
+            }
+            Data_Load(sender, e);
         }
 
         private void btnHoTen_Click(object sender, EventArgs e)

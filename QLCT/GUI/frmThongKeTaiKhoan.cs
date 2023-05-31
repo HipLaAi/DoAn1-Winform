@@ -19,11 +19,12 @@ namespace QLCT.GUI
             InitializeComponent();
         }
 
+        //Load biểu đồ
         private void Data_Load()
         {
-            chartSoLuongNguoiTheoTinh.Series["Số lượng người dùng"].Points.Clear();
+            chartSoLuongNguoiTheoTinh.Series["Số lượng người dùng"].Points.Clear(); //Làm mới biểu đồ
 
-            foreach (DataRow row in taiKhoanBUS.SoLuongTheoTinh().Rows)
+            foreach (DataRow row in taiKhoanBUS.SoLuongTheoTinh().Rows) //Biểu đồ cột thống kê theo tỉnh thành
             {
                 chartSoLuongNguoiTheoTinh.Series["Số lượng người dùng"].IsValueShownAsLabel = true;
                 chartSoLuongNguoiTheoTinh.Series["Số lượng người dùng"].Points.AddXY(row[0], row[1]);
@@ -35,11 +36,11 @@ namespace QLCT.GUI
                 chartSoLuongNguoiTheoTinh.Series["Số lượng người dùng"].Points.AddXY("Tên tỉnh thành", 0);
             }
 
-            chartSoLuongTheoDoTuoi.Series["Độ tuổi"].Points.Clear();
+            chartSoLuongTheoDoTuoi.Series["Độ tuổi"].Points.Clear(); //Làm mới biểu đồ
             string tinhThanh = cboTinh.Text;
             if (tinhThanh == "Tất cả")
                 tinhThanh = "";
-            foreach (DataRow row in taiKhoanBUS.SoLuongDoTuoi(tinhThanh).Rows)
+            foreach (DataRow row in taiKhoanBUS.SoLuongDoTuoi(tinhThanh).Rows) //Biểu đồ tròn thống kê theo độ tuổi
             {
                 chartSoLuongTheoDoTuoi.Series["Độ tuổi"].IsValueShownAsLabel = true;
                 chartSoLuongTheoDoTuoi.Series["Độ tuổi"].Points.AddXY(row[1], row[0]);
