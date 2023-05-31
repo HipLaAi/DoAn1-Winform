@@ -279,7 +279,7 @@ namespace QLCT.GUI
             this.cboHuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHuyen.ForeColor = System.Drawing.Color.DeepPink;
             this.cboHuyen.FormattingEnabled = true;
-            this.cboHuyen.Location = new System.Drawing.Point(311, 229);
+            this.cboHuyen.Location = new System.Drawing.Point(435, 229);
             this.cboHuyen.Name = "cboHuyen";
             this.cboHuyen.Size = new System.Drawing.Size(115, 26);
             this.cboHuyen.TabIndex = 59;
@@ -294,7 +294,7 @@ namespace QLCT.GUI
             this.cboTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTinh.ForeColor = System.Drawing.Color.DeepPink;
             this.cboTinh.FormattingEnabled = true;
-            this.cboTinh.Location = new System.Drawing.Point(435, 229);
+            this.cboTinh.Location = new System.Drawing.Point(314, 229);
             this.cboTinh.Name = "cboTinh";
             this.cboTinh.Size = new System.Drawing.Size(115, 26);
             this.cboTinh.TabIndex = 58;

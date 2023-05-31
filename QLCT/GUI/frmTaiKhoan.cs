@@ -19,6 +19,7 @@ namespace QLCT.GUI
         public frmTaiKhoan()
         {
             InitializeComponent();
+            InitializeDanhSachHuyen();
         }
         bool check = false;
         string sdt;
@@ -33,7 +34,7 @@ namespace QLCT.GUI
             mtxtSDT.Text = sdt = taiKhoanBUS.ThongTinTaiKhoan(frmDangNhap.TaiKhoan).Rows[0][5].ToString();
 
             cboTinh.DataSource = DanhSachTinhThanh; //Truyền danh sách tỉnh thành vào combobox
-            InitializeDanhSachHuyen();
+            //InitializeDanhSachHuyen();
             string diachi = taiKhoanBUS.ThongTinTaiKhoan(frmDangNhap.TaiKhoan).Rows[0][6].ToString();
             char separator = '-';
             string[] result = diachi.Split(separator);
@@ -88,7 +89,7 @@ namespace QLCT.GUI
                 {
                     if (taiKhoanBUS.CapNhatTaiKhoan(frmDangNhap.TaiKhoan, txtHoTen.Text, gioiTinh, SDT, diaChi, dtpNgaySinh.Value))
                     {
-                        MessageBox.Show("Cập nhật thông tin tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Cập nhật thông tin tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
